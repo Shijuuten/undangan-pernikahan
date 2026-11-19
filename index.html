@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Undangan Pernikahan Nisa &amp; Luqman</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Doodle SVG (dipakai berulang) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="hati" viewBox="0 0 24 24">
+        <path
+          d="M12 21C5 15 2 11.500 2 8a5 5 0 0 1 10-1.500A5 5 0 0 1 22 8c0 3.500-3 7-10 13z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="kilau" viewBox="0 0 24 24">
+        <path
+          d="M12 2c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+      </symbol>
+      <symbol id="cincin" viewBox="0 0 64 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="22" cy="30" r="14" />
+          <circle cx="42" cy="30" r="14" />
+          <path d="M17 12l5-8 5 8-5 5z" />
+        </g>
+      </symbol>
+      <symbol id="kalender" viewBox="0 0 64 64">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        >
+          <rect x="8" y="12" width="44" height="42" rx="3" />
+          <path
+            d="M8 24h44M18 8v8M42 8v8M30 44c-6-4-8-6-8-9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 3-2 5-8 9z"
+          />
+        </g>
+      </symbol>
+      <symbol id="merpati" viewBox="0 0 80 50">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M6 8c14 0 22 8 26 20 4-12 12-20 26-20-4 14-12 20-26 22-14-2-22-8-26-22z"
+          />
+          <path d="M32 30c0 8 4 14 10 16M42 30c8 0 14 4 18 10" />
+        </g>
+      </symbol>
+      <symbol id="pita" viewBox="0 0 230 58">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <path
+            d="M115 29C95 6 66 6 72 29s33 22 43 0c10 22 37 26 43 0s-23-23-43 0z"
+          />
+          <path
+            d="M115 29c-8 12-14 22-24 26M115 29c8 12 14 22 24 26M2 26c40 8 76 8 104 3M124 29c30 5 62 5 104-3"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <audio
+      id="musik"
+      src="musik/A Whole New World.mp3"
+      loop
+      preload="auto"
+    ></audio>
+    <button
+      class="musik"
+      id="tombolMusik"
+      type="button"
+      aria-label="Putar atau jeda musik"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor" id="ikonMusik">
+        <path d="M9 3v12.600A3.500 3.500 0 1 0 11 19V8h7V3z" />
+      </svg>
+    </button>
+
+    <div class="wrap">
+      <!-- 1. COVER -->
+      <header class="cover" id="awal">
+        <svg
+          class="dekor"
+          style="left: 6%; top: 9%; width: 70px; transform: rotate(-12deg)"
+        >
+          <use href="#cincin" />
+        </svg>
+        <svg class="dekor" style="right: 5%; top: 11%; width: 80px">
+          <use href="#pita" />
+        </svg>
+        <svg class="dekor" style="left: 5%; bottom: 28%; width: 22px">
+          <use href="#hati" />
+        </svg>
+        <svg class="dekor" style="right: 6%; bottom: 24%; width: 24px">
+          <use href="#hati" />
+        </svg>
+        <svg class="dekor" style="left: 20%; top: 30%; width: 20px">
+          <use href="#kilau" />
+        </svg>
+        <p class="tag">You Are Invited</p>
+        <h1>We are<br />getting<br />married!</h1>
+        <div class="foto-cover">
+          <figure class="bingkai kiri">
+            <img
+              src="foto/luqman.jpeg"
+              alt="Luqmanul Hakim"
+              width="1086"
+              height="1448"
+            />
+            <svg class="hati-foto" aria-hidden="true"><use href="#hati" /></svg>
+          </figure>
+          <figure class="bingkai kanan">
+            <img
+              src="foto/nisa.jpeg"
+              alt="Nisa Indhira Rahma"
+              width="1086"
+              height="1448"
+            />
+            <svg class="hati-foto" aria-hidden="true"><use href="#hati" /></svg>
+          </figure>
+        </div>
+        <p class="nama-cover">NISA + LUQMAN</p>
+        <p class="tgl">12 . 12 . 2026</p>
+        <p class="tamu">Kepada Yth.<b id="tamu">Bapak/Ibu/Saudara/i</b></p>
+        <button class="btn" id="buka" type="button">OPEN</button>
+      </header>
+
+      <!-- 2. QUOTE -->
+      <section id="mempelai">
+        <h2>You are<br />invited!</h2>
+        <svg
+          class="tali"
+          viewBox="0 0 400 130"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          aria-hidden="true"
+        >
+          <path d="M10 40C90 20 150 90 200 95c50-5 110-75 190-55" />
+          <path d="M200 95c-22-30-48-4-0 22 48-26 22-52 0-22z" />
+        </svg>
+        <p class="sub">THE WEDDING OF</p>
+        <p class="nama-besar">NISA + LUQMAN</p>
+        <div class="piringan">
+          <div class="kartu-ayat">
+            <div>
+              “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan-pasangan untukmu dari jenismu sendiri agar kamu cenderung
+              dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+              kasih dan sayang.”<br /><b>QS. Ar-Rum : 21</b>
+            </div>
+          </div>
+          <div class="vinyl" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- 3. MEMPELAI -->
+      <section>
+        <svg class="pita" aria-hidden="true"><use href="#pita" /></svg>
+        <h2>Bride &amp; Groom</h2>
+        <p class="kecil">
+          Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i
+          serta kerabat sekalian untuk menghadiri acara pernikahan kami.
+        </p>
+        <div class="oval">
+          <span>Foto berdua</span>
+          <img src="foto/couple.jpg" alt="" onerror="this.remove()" />
+        </div>
+        <div class="pasangan">
+          <div class="orang">
+            <h3>Nisa</h3>
+            <p class="lengkap">Nisa Indhira Rahma</p>
+            <p class="kecil">Putri dari Bapak ........ dan Ibu ........</p>
+          </div>
+          <p class="dan">&amp;</p>
+          <div class="orang">
+            <h3>Luqman</h3>
+            <p class="lengkap">Luqmanul Hakim</p>
+            <p class="kecil">Putra dari Bapak ........ dan Ibu ........</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SAVE THE DATE -->
+      <section class="acara">
+        <svg
+          class="dekor"
+          style="right: 8%; top: 2.5rem; width: 90px; color: var(--judul)"
+        >
+          <use href="#merpati" />
+        </svg>
+        <h2
+          style="text-align: left; transform: rotate(-6deg); margin-top: 0.5rem"
+        >
+          Save<br />the date!
+        </h2>
+        <div class="kal">
+          <div><small>Friday</small><strong>11</strong></div>
+          <div class="tengah"><small>Saturday</small><strong>12</strong></div>
+          <div><small>Sunday</small><strong>13</strong></div>
+          <svg class="hati" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 21C5 15 2 11.500 2 8a5 5 0 0 1 10-1.500A5 5 0 0 1 22 8c0 3.500-3 7-10 13z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.1"
+            />
+            <path
+              d="M12 20C6 14.500 3 11 3 8.200a4 4 0 0 1 9-1.300 4 4 0 0 1 9 1.300c0 2.800-3 6.300-9 11.800z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width=".8"
+            />
+          </svg>
+        </div>
+        <h3>Akad Nikah</h3>
+        <p>
+          Sabtu, 12 Desember 2026<br />Pukul : 08.00 - 10.00 WIB<br />Tempat :
+          Nama Gedung / Masjid
+        </p>
+        <p class="kecil">Alamat lengkap lokasi akad</p>
+        <h3>Resepsi</h3>
+        <p>
+          Sabtu, 12 Desember 2026<br />Pukul : 11.00 - 14.00 WIB<br />Tempat :
+          Nama Gedung
+        </p>
+        <p class="kecil">Alamat lengkap lokasi resepsi</p>
+        <a
+          class="btn garis"
+          href="https://www.google.com/maps/search/?api=1&query=Probolinggo"
+          target="_blank"
+          rel="noopener"
+          >Lihat Lokasi</a
+        >
+        <div class="hitung" role="timer">
+          <div><b id="d">0</b><span>Hari</span></div>
+          <div><b id="h">0</b><span>Jam</span></div>
+          <div><b id="m">0</b><span>Menit</span></div>
+          <div><b id="s">0</b><span>Detik</span></div>
+        </div>
+        <p class="kecil" id="selesai"></p>
+      </section>
+
+      <!-- 5. LOVE STORY -->
+      <section>
+        <h2>Love Story</h2>
+        <div class="cerita">
+          <article>
+            <svg class="ico"><use href="#kalender" /></svg><br /><small
+              >PERTAMA BERTEMU</small
+            >
+            <p>
+              Setiap kisah cinta bermula dari pertemuan sederhana. Dua
+              perjalanan yang terpisah perlahan mempertemukan kami.
+            </p>
+          </article>
+          <article>
+            <svg class="ico"><use href="#merpati" /></svg><br /><small
+              >MENJALANI BERSAMA</small
+            >
+            <p>
+              Lewat tawa, tantangan, dan momen-momen kecil, kami belajar saling
+              memahami dan menghargai.
+            </p>
+          </article>
+          <article>
+            <svg class="ico"><use href="#cincin" /></svg><br /><small
+              >MEMULAI BABAK BARU</small
+            >
+            <p>
+              Dengan hati yang bersyukur dan restu Allah SWT, kami siap memulai
+              perjalanan baru bersama.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 6. RSVP -->
+      <section id="rsvp">
+        <h2>Konfirmasi<br />Kehadiran</h2>
+        <p class="kecil">
+          Mohon konfirmasi kehadiran Anda agar kami dapat mempersiapkan acara
+          dengan baik.
+        </p>
+        <div class="rsvp">
+          <label for="nama">Nama</label
+          ><input
+            id="nama"
+            type="text"
+            autocomplete="name"
+            placeholder="Nama lengkap"
+          />
+          <label for="hadir">Kehadiran</label>
+          <select id="hadir">
+            <option>Hadir</option>
+            <option>Tidak hadir</option>
+            <option>Masih ragu</option>
+          </select>
+          <label for="jumlah">Jumlah tamu</label
+          ><input id="jumlah" type="number" min="1" max="5" value="1" />
+          <label for="ucapan">Ucapan dan doa</label
+          ><textarea
+            id="ucapan"
+            rows="3"
+            placeholder="Tulis ucapan untuk mempelai"
+          ></textarea>
+          <button class="btn" id="kirim" type="button">
+            Kirim via WhatsApp
+          </button>
+          <p id="pesan" role="status"></p>
+        </div>
+      </section>
+
+      <!-- 7. HADIAH -->
+      <section>
+        <svg class="dekor" style="left: 8%; top: 2rem; width: 26px">
+          <use href="#kilau" />
+        </svg>
+        <h2>Hadiah<br />Pernikahan</h2>
+        <p class="kecil">
+          Doa restu Anda sudah sangat berarti bagi kami. Jika ingin memberi
+          tanda kasih, dapat melalui rekening berikut.
+        </p>
+        <div class="kartu">
+          Bank BCA a.n. Nisa Indhira Rahma
+          <code id="rek">1234567890</code>
+          <button
+            class="btn garis"
+            id="salin"
+            type="button"
+            style="font-size: 1.15rem; padding: 0.4rem 1.4rem"
+          >
+            Salin Nomor
+          </button>
+        </div>
+      </section>
+
+      <!-- 8. PENUTUP -->
+      <section class="penutup">
+        <svg class="pita" aria-hidden="true"><use href="#pita" /></svg>
+        <h2>See you at our<br />wedding day!</h2>
+        <p class="kecil">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
+          kehadiran dan doa restunya kami ucapkan terima kasih.
+        </p>
+        <p class="with">WITH LOVE</p>
+        <p class="nama-akhir">NISA &amp; LUQMAN</p>
+      </section>
+    </div>
+
+    <script>
+      (function () {
+        var $ = function (i) {
+          return document.getElementById(i);
+        };
+
+        /* ===== TANGGAL ACARA (ubah di sini) ===== */
+        var target = new Date("2026-12-12T08:00:00+07:00").getTime();
+
+        /* ===== NOMOR WHATSAPP (format 62..., dipecah agar tidak mudah dicari bot) ===== */
+        var wa = ["62", "822", "2567", "7300"].join("");
+
+        /* ===== MUSIK ===== */
+        var audio = $("musik"),
+          tm = $("tombolMusik"),
+          ikon = $("ikonMusik");
+        var PLAY = "M9 3v12.600A3.500 3.500 0 1 0 11 19V8h7V3z",
+          OFF = "M4 4l16 16M9 3v7M11 19a3.500 3.500 0 1 1-2-3.200";
+        function status(on) {
+          document.body.classList.toggle("playing", on);
+          ikon.innerHTML = on
+            ? '<path d="' + PLAY + '"/>'
+            : '<path d="' +
+              PLAY +
+              '" opacity=".5"/><path d="M3 3l18 18" stroke="currentColor" stroke-width="2.500"/>';
+        }
+        function putar() {
+          try {
+            var p = audio.play();
+            if (p && p.then)
+              p.then(
+                function () {
+                  status(true);
+                },
+                function () {
+                  status(false);
+                },
+              );
+          } catch (e) {
+            status(false);
+          }
+        }
+        tm.addEventListener("click", function () {
+          audio.paused ? putar() : (audio.pause(), status(false));
+        });
+
+        $("buka").addEventListener("click", function () {
+          putar();
+          $("mempelai").scrollIntoView({ behavior: "smooth" });
+        });
+
+        /* ===== MUSIK OTOMATIS ===== */
+        var pemicu = ["pointerup", "touchend", "click", "keydown"];
+        function lepasPemicu() {
+          pemicu.forEach(function (ev) {
+            document.removeEventListener(ev, mulaiOtomatis, true);
+          });
+        }
+        function mulaiOtomatis(e) {
+          if (
+            e.target &&
+            (tm.contains(e.target) || $("buka").contains(e.target))
+          ) {
+            lepasPemicu();
+            return;
+          }
+          if (audio.paused) putar();
+          lepasPemicu();
+        }
+        putar();
+        pemicu.forEach(function (ev) {
+          document.addEventListener(ev, mulaiOtomatis, true);
+        });
+
+        /* ===== HITUNG MUNDUR ===== */
+        function tick() {
+          var x = target - Date.now();
+          if (x < 0) {
+            x = 0;
+            $("selesai").textContent = "Hari bahagia telah tiba.";
+          }
+          $("d").textContent = Math.floor(x / 864e5);
+          $("h").textContent = Math.floor((x % 864e5) / 36e5);
+          $("m").textContent = Math.floor((x % 36e5) / 6e4);
+          $("s").textContent = Math.floor((x % 6e4) / 1e3);
+        }
+        tick();
+        setInterval(tick, 1000);
+
+        /* ===== RSVP via WhatsApp ===== */
+        var pesan = $("pesan");
+        $("kirim").addEventListener("click", function () {
+          var nama = $("nama").value.trim();
+          if (!nama) {
+            pesan.textContent = "Isi nama Anda terlebih dahulu.";
+            $("nama").focus();
+            return;
+          }
+          try {
+            var last = parseInt(localStorage.getItem("rsvpAt") || "0");
+            if (Date.now() - last < 30000) {
+              pesan.textContent =
+                "Mohon tunggu sebentar sebelum mengirim lagi.";
+              return;
+            }
+            localStorage.setItem("rsvpAt", String(Date.now()));
+          } catch (e) {}
+          var hadir = $("hadir").value,
+            jml = Math.min(Math.max(parseInt($("jumlah").value) || 1, 1), 5),
+            uc = $("ucapan").value.trim().slice(0, 300);
+          var teks =
+            "Halo, saya " +
+            nama +
+            ". Konfirmasi: " +
+            hadir +
+            " (" +
+            jml +
+            " orang)." +
+            (uc ? " Ucapan: " + uc : "");
+          pesan.textContent =
+            "Membuka WhatsApp. Tekan kirim di sana untuk menyelesaikan konfirmasi.";
+          window.open(
+            "https://wa.me/" + wa + "?text=" + encodeURIComponent(teks),
+            "_blank",
+            "noopener",
+          );
+        });
+
+        /* ===== SALIN REKENING ===== */
+        $("salin").addEventListener("click", function () {
+          var b = this,
+            n = $("rek").textContent;
+          function ok() {
+            b.textContent = "Tersalin";
+            setTimeout(function () {
+              b.textContent = "Salin Nomor";
+            }, 2000);
+          }
+          try {
+            navigator.clipboard.writeText(n).then(ok, function () {
+              b.textContent = n;
+            });
+          } catch (e) {
+            b.textContent = n;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
