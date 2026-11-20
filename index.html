@@ -127,7 +127,7 @@
         <div class="foto-cover">
           <figure class="bingkai kiri">
             <img
-              src="foto/luqman.jpeg"
+              src="foto/nisa.jpeg"
               alt="Luqmanul Hakim"
               width="1086"
               height="1448"
@@ -136,7 +136,7 @@
           </figure>
           <figure class="bingkai kanan">
             <img
-              src="foto/nisa.jpeg"
+              src="foto/luqman.jpeg"
               alt="Nisa Indhira Rahma"
               width="1086"
               height="1448"
@@ -195,13 +195,13 @@
         <div class="pasangan">
           <div class="orang">
             <h3>Nisa</h3>
-            <p class="lengkap">Nisa Indhira Rahma</p>
+            <p class="lengkap">Nisa Indhira Rahma, SH.</p>
             <p class="kecil">Putri dari Bapak ........ dan Ibu ........</p>
           </div>
           <p class="dan">&amp;</p>
           <div class="orang">
             <h3>Luqman</h3>
-            <p class="lengkap">Luqmanul Hakim</p>
+            <p class="lengkap">Luqmanul Hakim, SH.</p>
             <p class="kecil">Putra dari Bapak ........ dan Ibu ........</p>
           </div>
         </div>
@@ -242,18 +242,24 @@
         <h3>Akad Nikah</h3>
         <p>
           Sabtu, 12 Desember 2026<br />Pukul : 08.00 - 10.00 WIB<br />Tempat :
-          Nama Gedung / Masjid
+          Rumah Banyuurip
         </p>
-        <p class="kecil">Alamat lengkap lokasi akad</p>
+        <p class="kecil">
+          Banyuurip Tengah, Banyuurip, Temanggung, Temanggung Regency, Central
+          Java 56211, Indonesia
+        </p>
         <h3>Resepsi</h3>
         <p>
           Sabtu, 12 Desember 2026<br />Pukul : 11.00 - 14.00 WIB<br />Tempat :
           Nama Gedung
         </p>
-        <p class="kecil">Alamat lengkap lokasi resepsi</p>
+        <p class="kecil">
+          Suronatan, Temanggung II, Temanggung, Temanggung Regency, Central Java
+          56213, Indonesia
+        </p>
         <a
           class="btn garis"
-          href="https://www.google.com/maps/search/?api=1&query=Probolinggo"
+          href="https://maps.app.goo.gl/PzD8BTaL2xwFTCgf6"
           target="_blank"
           rel="noopener"
           >Lihat Lokasi</a
@@ -381,7 +387,7 @@
           return document.getElementById(i);
         };
 
-        /* ===== NAMA TAMU DARI LINK (contoh: ?to=Nisa+Indira+Cantik) ===== */
+        /* NAMA TAMU DARI LINK */
         (function () {
           var nama = "";
           try {
@@ -395,10 +401,8 @@
           }
         })();
 
-        /* ===== TANGGAL ACARA (ubah di sini) ===== */
         var target = new Date("2026-12-12T08:00:00+07:00").getTime();
 
-        /* ===== NOMOR WHATSAPP (format 62..., dipecah agar tidak mudah dicari bot) ===== */
         var wa = ["62", "822", "2567", "7300"].join("");
 
         /* ===== MUSIK ===== */
@@ -462,6 +466,25 @@
         pemicu.forEach(function (ev) {
           document.addEventListener(ev, mulaiOtomatis, true);
         });
+
+        /* ===== JEDA MUSIK SAAT KELUAR DARI HALAMAN, LANJUT SAAT KEMBALI ===== */
+        var dijeda = false;
+        function jedaKeluar() {
+          if (!audio.paused) {
+            audio.pause();
+            dijeda = true;
+            status(false);
+          }
+        }
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            jedaKeluar();
+          } else if (dijeda) {
+            dijeda = false;
+            putar();
+          }
+        });
+        window.addEventListener("pagehide", jedaKeluar);
 
         /* ===== HITUNG MUNDUR ===== */
         function tick() {
